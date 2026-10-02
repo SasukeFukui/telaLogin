@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Página de login: informe seu e-mail ou telefone para acessar sua conta e ir para o Gmail.">
+  <meta name="robots" content="index,follow">
+  <title>Faça login - Contas</title>
+  <link rel="icon" href="img/logo-google.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="cartao">
+
+    <section class="coluna-esquerda">
+      <img class="logo" src="logo.svg" alt="Logotipo do Google" width="48" height="48">
+      <h1>Faça login</h1>
+      <p><a class="link-gmail" href="https://mail.google.com/">Ir para o Gmail</a></p>
+    </section>
+
+    <section class="coluna-direita">
+      <form action="#" method="post">
+        <label class="oculto" for="email">E-mail ou telefone</label>
+        <input class="campo" type="text" id="email" name="email" placeholder="E-mail ou telefone" autocomplete="username">
+
+        <p class="esqueceu">
+          <a class="link" href="https://accounts.google.com/signin/v2/usernamerecovery">Esqueceu o e-mail?</a>
+        </p>
+
+        <p class="aviso">
+          Não está no seu computador? Use uma janela privada para fazer login.
+          <a class="link" href="https://support.google.com/chrome/answer/6130773?hl=pt-BR">Saiba como usar o modo visitante.</a>
+        </p>
+
+        <div class="acoes">
+          <a class="link criar-conta" href="https://accounts.google.com/signup">Criar conta</a>
+          <button class="botao" type="submit">Avançar</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="idioma">
+      <label class="oculto" for="idioma">Idioma</label>
+      <select id="idioma" name="idioma">
+        <option value="pt-BR" selected>Português (Brasil)</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+      </select>
+    </div>
+
+    <nav class="links-rodape" aria-label="Links do rodapé">
+      <a href="https://support.google.com/accounts?hl=pt-BR">Ajuda</a>
+      <a href="https://policies.google.com/privacy?hl=pt-BR">Privacidade</a>
+      <a href="https://policies.google.com/terms?hl=pt-BR">Termos</a>
+    </nav>
+  </footer>
+
+</body>
+</html>

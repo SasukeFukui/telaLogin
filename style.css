@@ -1,0 +1,255 @@
+/* ==========================================================
+   Projeto 1 - HTML e CSS | Programação Web Frontend (UTFPR)
+   Réplica da tela de login do Google
+   Técnicas usadas: modelo de caixa, display, flexbox,
+   position, seletores, pseudo-classes e media-queries
+   ========================================================== */
+
+/* ---------- Estilos gerais ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #f0f4f9;
+  color: #1f1f1f;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+/* ---------- Cartão branco ---------- */
+.cartao {
+  display: flex;                 /* duas colunas lado a lado */
+  justify-content: space-between;
+  width: 1040px;
+  max-width: 100%;
+  margin: 130px auto 0 auto;
+  padding: 40px 36px 36px 36px;
+  background-color: #ffffff;
+  border-radius: 28px;
+}
+
+.coluna-esquerda {
+  width: 45%;
+}
+
+.coluna-direita {
+  width: 50%;
+  padding-top: 76px;
+}
+
+/* ---------- Coluna esquerda ---------- */
+.logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 16px;
+}
+
+h1 {
+  margin: 0 0 8px 0;
+  font-size: 36px;
+  font-weight: 400;
+  color: #1f1f1f;
+}
+
+.link-gmail {
+  color: #1f1f1f;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 0;
+}
+
+.link-gmail:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Coluna direita (formulário) ---------- */
+.campo {
+  display: block;
+  width: 100%;
+  height: 56px;
+  padding: 0 15px;
+  border: 1px solid #747775;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #1f1f1f;
+}
+
+.campo::placeholder {
+  color: #5f6368;
+}
+
+.campo:hover {
+  border-color: #1f1f1f;
+}
+
+.campo:focus {
+  outline: none;
+  border: 2px solid #0b57d0;
+  padding: 0 14px;
+}
+
+.link {
+  color: #0b57d0;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: #e8f0fe;
+  text-decoration: underline;
+}
+
+.link:focus {
+  outline: 2px solid #0b57d0;
+  outline-offset: 2px;
+}
+
+.esqueceu {
+  margin: 0 0 36px 0;
+}
+
+.esqueceu .link {
+  display: inline-block;
+  padding: 12px 0;
+}
+
+.aviso {
+  margin: 0 0 24px 0;
+  color: #444746;
+  line-height: 20px;
+}
+
+.aviso .link {
+  display: inline-block;
+  padding: 8px 0;
+}
+
+/* ---------- Botões ---------- */
+.acoes {
+  display: flex;
+  justify-content: flex-end;     /* alinha à direita */
+  align-items: center;           /* alinha na vertical */
+}
+
+.criar-conta {
+  display: inline-block;
+  padding: 14px 24px;
+  margin-right: 8px;
+  border-radius: 20px;
+}
+
+.botao {
+  height: 40px;
+  padding: 0 24px;
+  border: none;
+  border-radius: 20px;
+  background-color: #0b57d0;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: #0a4cb8;
+}
+
+.botao:focus {
+  outline: 2px solid #1f1f1f;
+  outline-offset: 2px;
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1040px;
+  max-width: 100%;
+  margin: 8px auto 0 auto;
+  padding: 0 16px;
+}
+
+.idioma select {
+  height: 48px;
+  padding: 0 8px;
+  border: none;
+  background-color: transparent;
+  color: #1f1f1f;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.links-rodape a {
+  display: inline-block;
+  padding: 16px 12px;
+  color: #1f1f1f;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.links-rodape a:hover {
+  background-color: #e1e8f0;
+}
+
+.links-rodape a:focus {
+  outline: 2px solid #0b57d0;
+}
+
+/* ---------- Texto só para leitores de tela (acessibilidade) ---------- */
+.oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ==========================================================
+   Layout para smartphones (design responsivo)
+   ========================================================== */
+@media screen and (max-width: 600px) {
+
+  body {
+    padding: 8px;
+  }
+
+  .cartao {
+    display: block;              /* colunas passam a ficar uma abaixo da outra */
+    margin-top: 24px;
+    padding: 24px 20px;
+    border-radius: 24px;
+  }
+
+  .coluna-esquerda,
+  .coluna-direita {
+    width: 100%;
+  }
+
+  .coluna-direita {
+    padding-top: 16px;
+  }
+
+  h1 {
+    margin-bottom: 8px;
+    font-size: 28px;
+  }
+
+  .esqueceu {
+    margin-bottom: 24px;
+  }
+
+  .aviso {
+    margin-bottom: 32px;
+  }
+
+  .rodape {
+    padding: 0;
+  }
+}
