@@ -79,6 +79,7 @@ h1 {
 .link {
   color: #0b57d0;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .link:hover,
@@ -93,7 +94,7 @@ h1 {
 .esqueceu .link {
   display: inline-block;
   padding: 12px 0;
-  text-decoration: none;
+  
 }
 
 .aviso {
@@ -161,6 +162,7 @@ h1 {
   padding: 16px 12px;
   color: #1f1f1f;
   font-size: 12px;
+  text-decoration: none;
 }
 
 .links-rodape a:hover,
