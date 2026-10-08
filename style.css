@@ -184,14 +184,16 @@ h1 {
 @media screen and (max-width: 600px) {
 
   body {
-    padding: 8px;
+    padding: 16px;
+    background-color: #ffffff
   }
 
   .cartao {
     display: block;              /* colunas passam a ficar uma abaixo da outra */
-    margin-top: 24px;
-    padding: 24px 20px;
-    border-radius: 24px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
   }
 
   .coluna-esquerda,
@@ -218,5 +220,18 @@ h1 {
 
   .rodape {
     padding: 0;
+  }
+
+
+  .acoes {
+    display: flex;
+    justify-content: space-between; /* Empurra um botão para cada ponta */
+    align-items: center;
+    width: 100%;
+  }
+
+  .criar-conta {
+    margin-right: 0;
+    padding: 10px 0; 
   }
 }
