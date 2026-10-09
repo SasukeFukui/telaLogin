@@ -5,21 +5,22 @@
 
 body {
   margin: 0;
-  padding: 20px;
+  padding: 50px;
   background-color: #f0f4f9;
   color: #1f1f1f;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
+
 }
 
 /* ---------- Cartão branco ---------- */
 .cartao {
   display: flex;                 /* duas colunas lado a lado */
   justify-content: space-between;
-  width: 1040px;
-  max-width: 100%;
-  margin: 130px auto 0 auto;
-  padding: 40px 36px 36px 36px;
+  width: 900px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+  padding: 36px 36px 36px 36px;
   background-color: #ffffff;
   border-radius: 28px;
 }
@@ -142,10 +143,10 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1040px;
-  max-width: 100%;
-  margin: 8px auto 0 auto;
-  padding: 0 16px;
+  width: 900px;
+  max-width: calc(100% - 48px);
+  margin: 24px auto 0 auto;
+  padding: 0;
 }
 
 .idioma select {
@@ -184,15 +185,20 @@ h1 {
 @media screen and (max-width: 600px) {
 
   body {
-    padding: 16px;
-    background-color: #ffffff
+    padding: 16px 12px;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
   }
 
   .cartao {
-    display: block;              /* colunas passam a ficar uma abaixo da outra */
+    display: block;              
+    flex-direction: column;
     width: 100%;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 10px;
     background-color: transparent;
   }
 
@@ -218,20 +224,35 @@ h1 {
     margin-bottom: 32px;
   }
 
-  .rodape {
-    padding: 0;
-  }
-
-
   .acoes {
     display: flex;
     justify-content: space-between; /* Empurra um botão para cada ponta */
     align-items: center;
     width: 100%;
+    margin-top: 32px;
   }
 
   .criar-conta {
     margin-right: 0;
     padding: 10px 0; 
+  }
+
+  .rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: auto; 
+    padding: 20px 0 20px 0;
+  }
+
+  .idioma select {
+    font-size: 11px;
+    padding: 0;
+  }
+
+  .links-rodape a {
+    padding: 1px;
+    font-size: 11px;
   }
 }
